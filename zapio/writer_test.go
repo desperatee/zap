@@ -24,11 +24,11 @@ import (
 	"io"
 	"testing"
 
+	"github.com/desperatee/zap"
+	"github.com/desperatee/zap/zapcore"
+	"github.com/desperatee/zap/zaptest/observer"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"go.uber.org/zap"
-	"go.uber.org/zap/zapcore"
-	"go.uber.org/zap/zaptest/observer"
 )
 
 func TestWriter(t *testing.T) {

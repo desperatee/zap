@@ -26,11 +26,9 @@ import (
 	"testing"
 	"time"
 
+	"github.com/desperatee/zap/internal/ztest"
 	"github.com/stretchr/testify/assert"
-	"go.uber.org/zap/internal/ztest"
-
 	//revive:disable:dot-imports
-	. "go.uber.org/zap/zapcore"
 )
 
 var counterTestCases = [][]string{

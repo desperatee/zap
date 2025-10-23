@@ -23,7 +23,7 @@ package zap
 import (
 	"fmt"
 
-	"go.uber.org/zap/zapcore"
+	"github.com/desperatee/zap/zapcore"
 
 	"go.uber.org/multierr"
 )

@@ -24,8 +24,8 @@ import (
 	"sync"
 	"testing"
 
-	"go.uber.org/zap/zapcore"
-	"go.uber.org/zap/zaptest/observer"
+	"github.com/desperatee/zap/zapcore"
+	"github.com/desperatee/zap/zaptest/observer"
 )
 
 func opts(opts ...Option) []Option {

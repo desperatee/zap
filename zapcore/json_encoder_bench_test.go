@@ -25,9 +25,7 @@ import (
 	"fmt"
 	"testing"
 	"time"
-
 	//revive:disable:dot-imports
-	. "go.uber.org/zap/zapcore"
 )
 
 func BenchmarkJSONLogMarshalerFunc(b *testing.B) {
