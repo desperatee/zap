@@ -37,6 +37,8 @@ const (
 	DebugLevel Level = iota - 1
 	// InfoLevel is the default logging priority.
 	InfoLevel
+	// SuccessLevel
+	SuccessLevel
 	// WarnLevel logs are more important than Info, but don't need individual
 	// human review.
 	WarnLevel
@@ -114,6 +116,8 @@ func (l Level) String() string {
 	switch l {
 	case DebugLevel:
 		return "debug"
+	case SuccessLevel:
+		return "success"
 	case InfoLevel:
 		return "info"
 	case WarnLevel:
@@ -138,6 +142,8 @@ func (l Level) CapitalString() string {
 	switch l {
 	case DebugLevel:
 		return "DEBUG"
+	case SuccessLevel:
+		return "SUCCESS"
 	case InfoLevel:
 		return "INFO"
 	case WarnLevel:
@@ -181,6 +187,8 @@ func (l *Level) unmarshalText(text []byte) bool {
 	switch string(text) {
 	case "debug":
 		*l = DebugLevel
+	case "succ", "success":
+		*l = SuccessLevel
 	case "info", "": // make the zero value useful
 		*l = InfoLevel
 	case "warn", "warning":
